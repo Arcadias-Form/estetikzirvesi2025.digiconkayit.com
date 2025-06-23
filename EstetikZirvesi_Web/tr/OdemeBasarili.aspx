@@ -1,0 +1,1 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/tr/tr.master" AutoEventWireup="true" CodeBehind="OdemeBasarili.aspx.cs" Inherits="EstetikZirvesi_Web.tr.OdemeBasarili" %>

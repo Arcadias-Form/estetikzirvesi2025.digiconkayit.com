@@ -1,0 +1,1 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/en/en.master" AutoEventWireup="true" CodeBehind="PaymentSuccess.aspx.cs" Inherits="EstetikZirvesi_Web.en.PaymentSuccess" %>

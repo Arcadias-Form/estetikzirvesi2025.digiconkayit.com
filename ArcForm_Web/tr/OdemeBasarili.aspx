@@ -1,1 +1,0 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/tr/tr.master" AutoEventWireup="true" CodeBehind="OdemeBasarili.aspx.cs" Inherits="ArcForm_Web.tr.OdemeBasarili" %>
