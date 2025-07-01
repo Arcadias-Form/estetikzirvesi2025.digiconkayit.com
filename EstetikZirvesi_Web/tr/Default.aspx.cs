@@ -180,7 +180,7 @@ namespace EstetikZirvesi_Web.tr
                 KatilimciID = KatilimciID,
                 DilID = "tr",
                 AdSoyad = Kontrol.KelimeKontrol(txtAdSoyad, "Ad & Soyad boş bırakılamaz.", ref Uyarilar),
-                Cinsiyet = Kontrol.KelimeKontrol(ddlCinsiyet, "Cinsiyet seçiniz", ref Uyarilar),
+                Cinsiyet = "-",
                 ePosta = Kontrol.ePostaKontrol(txtePosta, "e-Posta boş bırakılamaz", "Geçersiz eposta adresi girdiniz", ref Uyarilar),
                 CepTelefonu = Kontrol.KelimeKontrol(txtTelefon, "Cep Telefonu boş bırakılamaz", ref Uyarilar),
                 Kurum = txtKurum.Text,
@@ -246,7 +246,7 @@ namespace EstetikZirvesi_Web.tr
 
             if (secilenEtkinlikler.Count == 0)
             {
-                Uyarilar.Append("<p>Etkinlik seçiniz.</p>");
+                Uyarilar.Append("<p>Kurs seçiniz.</p>");
             }
 
             if (!KModel.KonaklamaBilgisi.GirisTarihi.Equals(DateTime.MinValue) && !KModel.KonaklamaBilgisi.CikisTarihi.Equals(DateTime.MinValue) && KModel.KonaklamaBilgisi.GirisTarihi >= KModel.KonaklamaBilgisi.CikisTarihi)
@@ -319,7 +319,7 @@ namespace EstetikZirvesi_Web.tr
                                         else
                                         {
                                             trn.Rollback();
-                                            BilgiKontrolMerkezi.UyariEkrani(this, $"UyariBilgilendirme('', 'Etkinlik bilgileriniz kaydedilirken hata meydana geldi. Hata mesajı: {SModel.HataBilgi.HataMesaji}', false);", false);
+                                            BilgiKontrolMerkezi.UyariEkrani(this, $"UyariBilgilendirme('', 'Kurs bilgileriniz kaydedilirken hata meydana geldi. Hata mesajı: {SModel.HataBilgi.HataMesaji}', false);", false);
                                         }
                                     }
                                     else

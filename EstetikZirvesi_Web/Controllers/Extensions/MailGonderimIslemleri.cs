@@ -41,7 +41,6 @@ namespace VeritabaniIslemMerkezi
                             .Append("<table style=\"width:100%;\" border=\"1\">")
                             .Append($"<tr><td colspan=\"2\" style=\"{textCenter}\"><b>Kiþisel Bilgiler</b></td></tr>")
                             .Append($"<tr><td style=\"width:30%;\">Kimlik No</td><td>{YeniKayit.KatilimciBilgisi.KimlikNo}</td></tr>")
-                            .Append($"<tr><td>Cinsiyet</td><td>{YeniKayit.KatilimciBilgisi.Cinsiyet}</td></tr>")
                             .Append($"<tr><td>e-Posta</td><td>{YeniKayit.KatilimciBilgisi.ePosta}</td></tr>")
                             .Append($"<tr><td>Cep Telefonu</td><td>{YeniKayit.KatilimciBilgisi.CepTelefonu}</td></tr>")
                             .Append($"<tr><td>Kurum</td><td>{YeniKayit.KatilimciBilgisi.Kurum}</td></tr>")
@@ -51,7 +50,7 @@ namespace VeritabaniIslemMerkezi
 
 
                         OutlookContent
-                            .Append($"<tr><td>Etkinlik(ler)</td><td>{string.Join(", ", (YeniKayit.KatilimciBilgisi.KatilimciEtkinlikBilgisi is null ? new List<string>() : YeniKayit.KatilimciBilgisi.KatilimciEtkinlikBilgisi.Select(x => x.EtkinlikBilgisi.EtkinlikDilBilgisi.First().Etkinlik).ToList()))}</td></tr>")
+                            .Append($"<tr><td>Kurs(lar)</td><td>{string.Join(", ", (YeniKayit.KatilimciBilgisi.KatilimciEtkinlikBilgisi is null ? new List<string>() : YeniKayit.KatilimciBilgisi.KatilimciEtkinlikBilgisi.Select(x => x.EtkinlikBilgisi.EtkinlikDilBilgisi.First().Etkinlik).ToList()))}</td></tr>")
                             .Append("<tr><td colspan=\"2\">&nbsp;</td></tr>")
                             .Append($"<tr><td colspan=\"2\" style=\"{textCenter}\"><b>Ödeme ve Fatura Bilgileri</b></td></tr>")
                             .Append($"<tr><td>Fatura Tipi</td><td>{YeniKayit.KatilimciBilgisi.FaturaTipi}</td></tr>")

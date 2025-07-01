@@ -51,6 +51,15 @@ namespace EstetikZirvesi_Web.tr
         protected global::System.Web.UI.WebControls.TextBox txtKimlikNo;
 
         /// <summary>
+        /// tr_cinsiyet denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluþturulan alan.
+        /// Deðiþtirmek için, alan bildirimini tasarýmcý dosyasýndan arka plan kod dosyasýna taþýyýn.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow tr_cinsiyet;
+
+        /// <summary>
         /// ddlCinsiyet denetimi.
         /// </summary>
         /// <remarks>

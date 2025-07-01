@@ -37,7 +37,7 @@
                                 <asp:TextBox ID="txtKimlikNo" runat="server" CssClass="form-control"></asp:TextBox>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="tr_cinsiyet" runat="server" visible="false">
                             <td>*</td>
                             <td>Cinsiyet</td>
                             <td>
@@ -195,7 +195,7 @@
                 </fieldset>
 
                 <fieldset id="fld_Etkinlik" runat="server" visible="true">
-                    <legend>Etkinlik(ler)</legend>
+                    <legend>Kurs(lar)</legend>
                     <table class="table table-striped">
                         <tbody>
                             <asp:Repeater ID="rptEtkinlikListesi" runat="server" ClientIDMode="AutoID" OnItemCommand="rptIcerikListesi_ItemCommand" DataSourceID="OleDbEtkinlikListesi">
@@ -258,7 +258,7 @@
                         </tr>
                         <tr id="tr_EtkinlikUcret" runat="server" visible="true">
                             <td>&nbsp;</td>
-                            <td>Etkinlik Ücreti</td>
+                            <td>Kurs Ücreti</td>
                             <td>
                                 <asp:Label ID="lblEtkinlikUcret" runat="server" CssClass="form-control"></asp:Label>
                                 <asp:HiddenField ID="hfEtkinlikUcret" runat="server" Visible="false" />
