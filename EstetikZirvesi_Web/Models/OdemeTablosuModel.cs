@@ -18,21 +18,15 @@ namespace Model
             MainRow[4] = KatilimciBilgisi.CepTelefonu;
             MainRow[5] = KatilimciBilgisi.Kurum;
             MainRow[6] = KatilimciBilgisi.KatilimciTipiBilgisi.KatilimciTipiDilBilgisi.First().KatilimciTipi;
-            MainRow[7] = KatilimciBilgisi.KonaklamaBilgisi.OdaTipiBilgisi.OtelBilgisi.Otel;
-            MainRow[8] = KatilimciBilgisi.KonaklamaBilgisi.OdaTipiBilgisi.OdaTipiDilBilgisi.First().OdaTipi;
-            MainRow[9] = KatilimciBilgisi.KonaklamaBilgisi.GirisTarihi.ToShortDateString();
-            MainRow[10] = KatilimciBilgisi.KonaklamaBilgisi.CikisTarihi.ToShortDateString();
-            MainRow[11] = KatilimciBilgisi.KonaklamaBilgisi.Refakatci;
-            MainRow[12] = KatilimciBilgisi.TransferBilgisi.TransferTipiBilgisi.TransferTipiDilBilgisi.First().TransferTipi;
-            MainRow[13] = string.Join(", ", KatilimciBilgisi.KatilimciKursBilgisi is null ? new List<string>() : KatilimciBilgisi.KatilimciKursBilgisi.Select(x => x.KursTipiBilgisi.KursTipiDilBilgisi.First().KursTipi).ToList());
-            MainRow[14] = string.Join(", ", KatilimciBilgisi.KatilimciEtkinlikBilgisi is null ? new List<string>() : KatilimciBilgisi.KatilimciEtkinlikBilgisi.Select(x => x.EtkinlikBilgisi.EtkinlikDilBilgisi.First().Etkinlik).ToList());
-            MainRow[15] = KatilimciBilgisi.FaturaUnvan;
-            MainRow[16] = KatilimciBilgisi.FaturaAdres;
-            MainRow[17] = KatilimciBilgisi.VergiDairesi;
-            MainRow[18] = KatilimciBilgisi.VergiNo;
-            MainRow[19] = OdemeTipiBilgisi.OdemeTipiDilBilgisi.First().OdemeTipi;
-            MainRow[20] = $"{DovizUcret}";
-            MainRow[21] = $"{OdemeTarihi:dd.MM.yyyy HH:mm}";
+            MainRow[7] = string.Join(", ", KatilimciBilgisi.KatilimciKursBilgisi is null ? new List<string>() : KatilimciBilgisi.KatilimciKursBilgisi.Select(x => x.KursTipiBilgisi.KursTipiDilBilgisi.First().KursTipi).ToList());
+            MainRow[8] = string.Join(", ", KatilimciBilgisi.KatilimciEtkinlikBilgisi is null ? new List<string>() : KatilimciBilgisi.KatilimciEtkinlikBilgisi.Select(x => x.EtkinlikBilgisi.EtkinlikDilBilgisi.First().Etkinlik).ToList());
+            MainRow[9] = KatilimciBilgisi.FaturaUnvan;
+            MainRow[10] = KatilimciBilgisi.FaturaAdres;
+            MainRow[11] = KatilimciBilgisi.VergiDairesi;
+            MainRow[12] = KatilimciBilgisi.VergiNo;
+            MainRow[13] = OdemeTipiBilgisi.OdemeTipiDilBilgisi.First().OdemeTipi;
+            MainRow[14] = $"{DovizUcret}";
+            MainRow[15] = $"{OdemeTarihi:dd.MM.yyyy HH:mm}";
 
             return MainRow;
         }

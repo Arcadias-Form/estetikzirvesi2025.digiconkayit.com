@@ -197,9 +197,9 @@ namespace EstetikZirvesi_Web.tr
                 KonaklamaBilgisi = new KonaklamaTablosuModel
                 {
                     KatilimciID = KatilimciID,
-                    OdaTipiID = Kontrol.TamSayiyaKontrol(ddlOtel, "Konaklama seçiniz", "Geçersiz otel seçildi", ref Uyarilar).Equals(0) ? 0 : Kontrol.TamSayiyaKontrol(ddlOdaTipi, "Oda Tipi seçiniz", "Geçersiz oda tipi seçildi", ref Uyarilar),
-                    GirisTarihi = Kontrol.TariheKontrol(txtGirisTarihi, "Giriş tarihinizi seçiniz", "Geçersiz giriş tarihi seçildi", ref Uyarilar),
-                    CikisTarihi = Kontrol.TariheKontrol(txtCikisTarihi, "Cıkış tarihi seçiniz", "Geçersiz çıkış tarihi seçildi", ref Uyarilar),
+                    OdaTipiID = 7,
+                    GirisTarihi = Kontrol.Simdi(),
+                    CikisTarihi = Kontrol.Simdi().AddDays(1),
                     Refakatci = tr_Refakatci.Visible ? Kontrol.KelimeKontrol(txtRefakatci, "Refakatçi boş bırakılamaz", ref Uyarilar) : string.Empty,
                     GuncellenmeTarihi = Kontrol.Simdi(),
                     EklenmeTarihi = Kontrol.Simdi()
@@ -207,7 +207,7 @@ namespace EstetikZirvesi_Web.tr
                 TransferBilgisi = new TransferTablosuModel
                 {
                     KatilimciID = KatilimciID,
-                    TransferTipiID = Kontrol.TamSayiyaKontrol(ddlTransferTipi, "Transfer tipini seçinizi", "Geçersiz transfer tipi seçildi", ref Uyarilar),
+                    TransferTipiID = 12,
                     GuncellenmeTarihi = Kontrol.Simdi(),
                     EklenmeTarihi = Kontrol.Simdi()
                 },

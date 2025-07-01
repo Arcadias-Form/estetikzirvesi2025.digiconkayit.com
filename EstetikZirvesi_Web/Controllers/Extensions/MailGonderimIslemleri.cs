@@ -27,7 +27,7 @@ namespace VeritabaniIslemMerkezi
             {
                 mm.From.Add(new MailboxAddress("Estetik Zirvesi 2025", "estetikzirvesi2025@digiconkayit.com"));
                 mm.To.Add(new MailboxAddress(YeniKayit.KatilimciBilgisi.AdSoyad, YeniKayit.KatilimciBilgisi.ePosta));
-                mm.Bcc.Add(new MailboxAddress("Estetik Zirvesi 2025", "estetikzirvesi@rubikonturizm.com"));
+               mm.Bcc.Add(new MailboxAddress("Estetik Zirvesi 2025", "estetikzirvesi@rubikonturizm.com"));
 
                 switch (DilID)
                 {
@@ -47,20 +47,10 @@ namespace VeritabaniIslemMerkezi
                             .Append($"<tr><td>Kurum</td><td>{YeniKayit.KatilimciBilgisi.Kurum}</td></tr>")
                             .Append($"<tr><td colspan=\"2\">&nbsp;</td></tr>")
                             .Append($"<tr><td colspan=\"2\" style=\"{textCenter}\"><b>Hizmetler</b></td></tr>")
-                            .Append($"<tr><td>Katýlýmcý Tipi</td><td>{YeniKayit.KatilimciBilgisi.KatilimciTipiBilgisi.KatilimciTipiDilBilgisi.First().KatilimciTipi}</td></tr>")
-                            .Append($"<tr><td>Konaklama</td><td>{YeniKayit.KatilimciBilgisi.KonaklamaBilgisi.OdaTipiBilgisi.OtelBilgisi.Otel} / {YeniKayit.KatilimciBilgisi.KonaklamaBilgisi.OdaTipiBilgisi.OdaTipiDilBilgisi.First().OdaTipi}</td></tr>")
-                            .Append($"<tr><td>Giriþ Tarihi</td><td>{YeniKayit.KatilimciBilgisi.KonaklamaBilgisi.GirisTarihi:dd.MM.yyyy}</td></tr>")
-                            .Append($"<tr><td>Cýkýþ Tarihi</td><td>{YeniKayit.KatilimciBilgisi.KonaklamaBilgisi.CikisTarihi:dd.MM.yyyy}</td></tr>");
+                            .Append($"<tr><td>Katýlýmcý Tipi</td><td>{YeniKayit.KatilimciBilgisi.KatilimciTipiBilgisi.KatilimciTipiDilBilgisi.First().KatilimciTipi}</td></tr>");
 
-                        if (YeniKayit.KatilimciBilgisi.KonaklamaBilgisi.OdaTipiBilgisi.RefakatciDurum)
-                        {
-                            OutlookContent
-                                .Append($"<tr><td>Refakatçi</td><td>{YeniKayit.KatilimciBilgisi.KonaklamaBilgisi.Refakatci}</td></tr>");
-                        }
 
                         OutlookContent
-                            .Append($"<tr><td>Transfer</td><td>{YeniKayit.KatilimciBilgisi.TransferBilgisi.TransferTipiBilgisi.TransferTipiDilBilgisi.First().TransferTipi}</td></tr>")
-                            .Append($"<tr><td>Kurs(lar)</td><td>{string.Join(", ", (YeniKayit.KatilimciBilgisi.KatilimciKursBilgisi is null ? new List<string>() : YeniKayit.KatilimciBilgisi.KatilimciKursBilgisi.Select(x => x.KursTipiBilgisi.KursTipiDilBilgisi.First().KursTipi).ToList()))}</td></tr>")
                             .Append($"<tr><td>Etkinlik(ler)</td><td>{string.Join(", ", (YeniKayit.KatilimciBilgisi.KatilimciEtkinlikBilgisi is null ? new List<string>() : YeniKayit.KatilimciBilgisi.KatilimciEtkinlikBilgisi.Select(x => x.EtkinlikBilgisi.EtkinlikDilBilgisi.First().Etkinlik).ToList()))}</td></tr>")
                             .Append("<tr><td colspan=\"2\">&nbsp;</td></tr>")
                             .Append($"<tr><td colspan=\"2\" style=\"{textCenter}\"><b>Ödeme ve Fatura Bilgileri</b></td></tr>")

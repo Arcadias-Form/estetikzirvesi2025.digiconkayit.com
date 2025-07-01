@@ -120,7 +120,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Katılım, Konaklama ve Transfer Bilgileri</legend>
+                    <legend>Katılım Bilgileri</legend>
                     <table class="AlseinTable">
                         <tr>
                             <td>*</td>
@@ -129,7 +129,7 @@
                                 <asp:DropDownList ID="ddlKatilimciTipi" runat="server" CssClass="form-control" AutoPostBack="true" DataSourceID="OleDbKatilimciTipiListesi" DataTextField="KatilimciTipi" DataValueField="KatilimciTipiID" onchange="showLoadingIcon();" OnSelectedIndexChanged="ddlKatilimciTipi_SelectedIndexChanged"></asp:DropDownList>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="tr_konaklama" runat="server" visible="false">
                             <td>*</td>
                             <td>Konaklama</td>
                             <td>
@@ -164,7 +164,7 @@
                                 <asp:TextBox ID="txtRefakatci" runat="server" CssClass="form-control" onchange="toUpper(this);" onkeyup="toUpper(this);"></asp:TextBox>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="tr_transfer" runat="server" visible="false">
                             <td>*</td>
                             <td>Transfer Tipi</td>
                             <td>
@@ -232,7 +232,7 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr id="tr_konaklamaUcret" runat="server" visible="false">
                             <td>&nbsp;</td>
                             <td>Konaklama Ücreti</td>
                             <td>
@@ -240,7 +240,7 @@
                                 <asp:HiddenField ID="hfKonaklamaUcret" runat="server" Visible="false" />
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="tr_transferUcret" runat="server" visible="false">
                             <td>&nbsp;</td>
                             <td>Transfer Ücreti</td>
                             <td>

@@ -141,6 +141,15 @@ namespace EstetikZirvesi_Web.tr
         protected global::System.Web.UI.WebControls.DropDownList ddlKatilimciTipi;
 
         /// <summary>
+        /// tr_konaklama denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluþturulan alan.
+        /// Deðiþtirmek için, alan bildirimini tasarýmcý dosyasýndan arka plan kod dosyasýna taþýyýn.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow tr_konaklama;
+
+        /// <summary>
         /// ddlOtel denetimi.
         /// </summary>
         /// <remarks>
@@ -222,6 +231,15 @@ namespace EstetikZirvesi_Web.tr
         protected global::System.Web.UI.WebControls.TextBox txtRefakatci;
 
         /// <summary>
+        /// tr_transfer denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluþturulan alan.
+        /// Deðiþtirmek için, alan bildirimini tasarýmcý dosyasýndan arka plan kod dosyasýna taþýyýn.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow tr_transfer;
+
+        /// <summary>
         /// ddlTransferTipi denetimi.
         /// </summary>
         /// <remarks>
@@ -294,6 +312,15 @@ namespace EstetikZirvesi_Web.tr
         protected global::System.Web.UI.WebControls.HiddenField hfKatilimciUcret;
 
         /// <summary>
+        /// tr_konaklamaUcret denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluþturulan alan.
+        /// Deðiþtirmek için, alan bildirimini tasarýmcý dosyasýndan arka plan kod dosyasýna taþýyýn.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow tr_konaklamaUcret;
+
+        /// <summary>
         /// lblKonaklamaUcret denetimi.
         /// </summary>
         /// <remarks>
@@ -310,6 +337,15 @@ namespace EstetikZirvesi_Web.tr
         /// Deðiþtirmek için, alan bildirimini tasarýmcý dosyasýndan arka plan kod dosyasýna taþýyýn.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfKonaklamaUcret;
+
+        /// <summary>
+        /// tr_transferUcret denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluþturulan alan.
+        /// Deðiþtirmek için, alan bildirimini tasarýmcý dosyasýndan arka plan kod dosyasýna taþýyýn.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow tr_transferUcret;
 
         /// <summary>
         /// lblTransferUcret denetimi.
